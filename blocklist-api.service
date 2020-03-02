@@ -1,0 +1,30 @@
+# /etc/systemd/system/blocklist-api.service
+
+[Unit]
+Description=blocklist api
+
+# Requirements
+Requires=network.target
+
+# Dependency ordering
+After=network.target
+
+[Service]
+TimeoutStartSec=0
+RestartSec=10
+Restart=always
+
+# path to app
+WorkingDirectory=/var/www/html/cgi-bin
+# the user that you want to run app by
+User=blocklist
+
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+# Main process
+ExecStart=/usr/local/bin/uwsgi --ini /var/www/html/cgi-bin/blocklist-api.ini
+
+[Install]
+WantedBy=multi-user.target
