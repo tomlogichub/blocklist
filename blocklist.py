@@ -7,7 +7,7 @@ import json
 import time
 from cgi import parse_qs, escape
 
-blocklist = '/var/www/html/block-list.html'
+blocklist = '/var/www/html/blocklist.html'
 
 def update_blocklist(environ, start_response):
     # Returns a dictionary in which the values are lists
