@@ -13,10 +13,10 @@ To install, run blocklist_install.sh.
 
 # Usage
 Add IP addresses to the list:
-  - http://<server>/cgi-bin/blocklist.py?action=add&ip=x.x.x.x
+  - http://your-server/cgi-bin/blocklist.py?action=add&ip=x.x.x.x
 
 Remove IP addresses from the list:
-  - http://<server>/cgi-bin/blocklist.py?action=remove&ip=x.x.x.x
+  - http://your-server/cgi-bin/blocklist.py?action=remove&ip=x.x.x.x
 
 # Output
-The blocklist will be available at http://<server>/blocklist.html
+The blocklist will be available at http://your-server/blocklist.html
