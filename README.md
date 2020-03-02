@@ -2,9 +2,14 @@
 Creates a blocklist server that can be referenced by a Palo Alto firewall
 
 # Installation
-To install, run blocklist_install.sh.  Note that the install script assumes nginx is not installed.  If you run this on a server that has an nginx installation, the /etc/nginx/sites-enabled/default symlink will be removed.
 
-This utility does not support authentication for adding to or removing from the blocklist or for reading the blocklist so do not expose the application to the public Internet.
+DO NOT run the install on a production nginx server.
+
+Note that the install script installs nginx, creates a new nginx site and removes the /etc/nginx/sites-enabled/default symlink.
+
+Also note that this utility does not support authentication for adding to or removing from the blocklist or for reading the blocklist so do not expose the application to the public Internet.
+
+To install, run blocklist_install.sh.
 
 # Usage
 Add IP addresses to the list:
