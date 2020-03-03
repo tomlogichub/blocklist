@@ -59,7 +59,7 @@ def update_blocklist(environ, start_response):
             lines = f.readlines()
         with open(blocklist, "w") as f:
             for line in lines:
-                if line.strip("\n") != ip:
+                if line.strip("\n") != ip and line != '\n':
                     f.write(line)
 
     htmlResponse = [ "<!DOCTYPE html>" ]
